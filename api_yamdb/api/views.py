@@ -3,20 +3,20 @@ from django.core.mail import EmailMessage
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import (
+    filters, mixins, permissions, serializers, status, viewsets
+)
 from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework import (
-    filters, mixins, permissions, serializers, status, viewsets
-)
 from rest_framework_simplejwt.tokens import RefreshToken
-from reviews.models import Category, Genre, Review, Title, User
 
 from .filters import TitleFilter
 from .permissions import (IsAdminOrReadOnly,
                           IsAuthorOrReadOnly, IsSuperUserOrAdmin)
+from reviews.models import Category, Genre, Review, Title, User
 from .serializers import (CategorySerializer, CommentSerializer,
                           GenreSerializer, ReviewSerializer, SignUpSerializer,
                           TitleSerializerReadOnly, TitleSerializerWritable,
