@@ -16,7 +16,7 @@ ReadMe
 - Docker, Docker compose
 - GitHub Workflow
 
-## Инструкция по заапуску
+## Инструкция по запуску на локальном компьютере
 ### Шаблон .env файла
 В папке /infra_sp2/infra/, создать файл .env со седующими переменными (формат НАЗВАНИЕ_ПЕРЕМЕННОЙ=ТЕКСТ, например DB_ENGINE=django.db.backends.postgresql): 
 - DB_ENGINE - указывается вид БД (по умолчанию - 'django.db.backends.postgresql')
