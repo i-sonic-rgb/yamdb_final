@@ -59,7 +59,7 @@ jobs:
           script: |
             sudo docker-compose stop
             sudo docker-compose rm web
-            sudo docker system prune
+            sudo docker system prune -f
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
