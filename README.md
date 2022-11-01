@@ -1,11 +1,15 @@
 ReadMe
 # YaMDB
-![example event parameter](https://github.com/i-sonic-rgb/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
+![event parameter](https://github.com/i-sonic-rgb/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
+https://github.com/i-sonic-rgb/yamdb_final
+
 ## Общее описание
 Проект сайта для выставления оценок (рейтинга) и комментариев для произведений.
 На сайте администратором загружаются наименования произведений, которые относятся к различным категориям (книги, музыка, фильмы) и жанрам (комедия, хоррор) 
 Зарегистрированные пользователи могут ставить оценки произведениям (от 1 до 10), писать рецензии (не более 1 рецензии от 1 пользователя на произведение).
 Также зарегистрированные пользователи могут оставлять комментарии к рецензиям.
+
+Проект доступен по адресу: http://158.160.12.170
 
 ### Технологии
 - Python 
@@ -40,9 +44,9 @@ ReadMe
 - чтобы удалить контейнеры и зависимости: sudo docker-compose down -v
 
 ### Доступные эндпоинты
-- localhost/redoc/ - файл redoc
-- localhost/admin/ - панель администирования
-- localhost/api/v1/ - api сайта
+- 158.160.12.170/redoc/ - файл redoc
+- 158.160.12.170/admin/ - панель администирования
+- 158.160.12.170/api/v1/ - api сайта
 
 ## Авторы
 ### Бэкенд:
