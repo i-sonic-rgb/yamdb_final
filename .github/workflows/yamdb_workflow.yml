@@ -59,7 +59,6 @@ jobs:
           script: |
             sudo docker-compose down
             sudo docker-compose rm -f web
-            sudo docker system prune -f
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final
             rm .env
             touch .env
@@ -70,8 +69,9 @@ jobs:
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
             # echo DJANGO_ALLOWED_HOSTS=${{ secrets.DJANGO_ALLOWED_HOSTS }} >> .env
-            # echo "DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}" >> .env
+            echo "DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}" >> .env
             sudo docker-compose up -d
+            sudo docker system prune -f
 
   send_message:
     runs-on: ubuntu-latest
