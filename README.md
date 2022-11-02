@@ -1,6 +1,7 @@
 ReadMe
 # YaMDB
 ![event parameter](https://github.com/i-sonic-rgb/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
+
 https://github.com/i-sonic-rgb/yamdb_final
 
 ## Общее описание
