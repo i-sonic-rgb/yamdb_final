@@ -44,7 +44,19 @@ https://github.com/i-sonic-rgb/yamdb_final
 - наберите sudo docker-compose exec web python manage.py collectstatic --no-input
 - чтобы удалить контейнеры и зависимости: sudo docker-compose down -v
 
-### Доступные эндпоинты
+## Инструкция по запуску на сервере
+- На сервере должны быть установлены Docker, docker-compose
+- Требуется получение сертифика SSL для работы домена
+### Инструкции при первом запуске на сервере
+- загрузите на сервер в рабочую папку файл docker-compose.yaml и скрипт из статьи https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71 
+- загрузите на сервер в папку ~/nginx/ файл default.config
+Запустите скрипт за запуска сервера с SSL:
+- sudo ./init-letsencrypt.sh
+Запустите миграции:
+- sudo docker-compose exec web python manage.py makemigrations reviews
+- sudo docker-compose exec web python manage.py migrate
+
+## Доступные эндпоинты
 - sonicyap.myftp.org/redoc/ - файл redoc
 - sonicyap.myftp.org/admin/ - панель администирования
 - sonicyap.myftp.org/api/v1/ - api сайта
