@@ -53,6 +53,7 @@ https://github.com/i-sonic-rgb/yamdb_final
 Запустите скрипт за запуска сервера с SSL:
 - sudo ./init-letsencrypt.sh
 Запустите миграции:
+- sudo docker-compose exec web python manage.py collectstatic
 - sudo docker-compose exec web python manage.py makemigrations reviews
 - sudo docker-compose exec web python manage.py migrate
 
